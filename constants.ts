@@ -1,0 +1,5 @@
+export const REPO = "samouraiworld/gnodaokit"
+export const PR_MERGED_LABEL = "- PRs Merged ✅"
+export const PR_WAITING_REVIEW_LABEL = "- PRs Waiting for Review ⚠️"
+export const PR_IN_PROGRESS_LABEL = "- PRs In Progress 🚧"
+export const ISSUE_OPENED_LABEL = "- Issues Opened ❗"
