@@ -114,28 +114,28 @@ async function fetchIssues(): Promise<Issue[]> {
   if (mergedThisWeek.length) {
     markdownMessage += `${PR_MERGED_LABEL}\n`;
     for (const pr of mergedThisWeek) {
-      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} ${pr.user.login}\n`;
+      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} - ${pr.user.login}\n`;
     }
   }
 
   if (waitingReview.length) {
     markdownMessage += `${PR_WAITING_REVIEW_LABEL}\n`;
     for (const pr of waitingReview) {
-      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} ${pr.user.login}\n`;
+      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} - ${pr.user.login}\n`;
     }
   }
 
   if (inProgress.length) {
     markdownMessage += `${PR_IN_PROGRESS_LABEL}\n`;
     for (const pr of inProgress) {
-      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} ${pr.user.login}\n`;
+      markdownMessage += `    - **${pr.title}** https://github.com/${REPO}/pull/${pr.number} - ${pr.user.login}\n`;
     }
   }
 
   if (issuesOpened.length) {
     markdownMessage += `${ISSUE_OPENED_LABEL}\n`;
     for (const issue of issuesOpened) {
-      markdownMessage += `    - **${issue.title}** https://github.com/${REPO}/issues/${issue.number} ${issue.user!.login}\n`;
+      markdownMessage += `    - **${issue.title}** https://github.com/${REPO}/issues/${issue.number} - ${issue.user!.login}\n`;
     }
   }
 
