@@ -20,15 +20,16 @@ const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 // Check if a user belongs to the samouraiworld organization
 async function isSamouraiMember(userLogin: string): Promise<boolean> {
-  try {
-    await octokit.rest.orgs.checkMembershipForUser({
-      org: "samouraiworld",
-      username: userLogin,
-    });
-    return true;
-  } catch {
-    return false;
-  }
+  return true;
+  // try {
+  //   await octokit.rest.orgs.checkMembershipForUser({
+  //     org: "samouraiworld",
+  //     username: userLogin,
+  //   });
+  //   return true;
+  // } catch {
+  //   return false;
+  // }
 }
 
 // Fetch pull requests from GitHub using Octokit
